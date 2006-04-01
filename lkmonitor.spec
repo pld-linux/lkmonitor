@@ -24,7 +24,7 @@ memory and/or the file system registered in kernel.
 lkmonitor to narzêdzie do monitorowania i zarz±dzania j±drem Linuksa.
 Zosta³o stworzone dla GNOME, przy u¿yciu bibliotek Glib i GTK+, w
 jêzyku C. lkmonitor próbuje dostarczyæ szczegó³owe informacje o
-charaterystyce systemu, takie jak rodzaj procesora, stan pamiêci czy
+charakterystyce systemu, takie jak rodzaj procesora, stan pamiêci czy
 systemy plików zarejestrowane w j±drze.
 
 %prep
