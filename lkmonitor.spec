@@ -1,4 +1,5 @@
-Summary:	lkmonitor - linux kernel monitor
+Summary:	lkmonitor - Linux kernel monitor
+Summary(pl):	lkmonitor - monitor j±dra Linuksa.
 Name:		lkmonitor
 Version:	0.1
 Release:	0.1
@@ -13,11 +14,18 @@ BuildRequires:	libgnomeui-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Lkmonitor is a tool for monitoring and managing linux's kernel. It has
-been developed for GNOME, using Glib and Gtk libraries in C Language.
+Lkmonitor is a tool for monitoring and managing Linux kernel. It has
+been developed for GNOME, using Glib and GTK+ libraries in C Language.
 lkmonitor tries to offer detailed information about the
-characteristics of the system, such as types of cpu, state of the
+characteristics of the system, such as types of CPU, state of the
 memory and/or the file system registered in kernel.
+
+%description -l pl
+lkmonitor to narzêdzie do monitorowania i zarz±dzania j±drem Linuksa.
+Zosta³o stworzone dla GNOME, przy u¿yciu bibliotek Glib i GTK+, w
+jêzyku C. lkmonitor próbuje dostarczyæ szczegó³owe informacje o
+charaterystyce systemu, takie jak rodzaj procesora, stan pamiêci czy
+systemy plików zarejestrowane w j±drze.
 
 %prep
 %setup -q
