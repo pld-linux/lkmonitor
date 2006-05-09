@@ -10,7 +10,8 @@ Source0:	http://dl.sourceforge.net/lkmonitor/%{name}-%{version}.tar.gz
 URL:		http://lkmonitor.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libgnomeui-devel
+BuildRequires:	libgnomeui-devel >= 2.0
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
