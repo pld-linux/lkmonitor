@@ -1,13 +1,14 @@
 Summary:	lkmonitor - Linux kernel monitor
 Summary(pl):	lkmonitor - monitor j±dra Linuksa
 Name:		lkmonitor
-Version:	0.1
+Version:	0.2
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/lkmonitor/%{name}-%{version}.tar.gz
-# Source0-md5:	39740974aac73360e110d3e91985992c
+# Source0-md5:	1c017263dcd38c65453f2cbee3d36832
 URL:		http://lkmonitor.sourceforge.net/
+Patch0:		%{name}-pixmapsdir.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libgnomeui-devel >= 2.0
@@ -30,6 +31,7 @@ systemy plików zarejestrowane w j±drze.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal}
@@ -49,6 +51,7 @@ install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 mv -f $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}/* $RPM_BUILD_ROOT%{_pixmapsdir}
 mv -f $RPM_BUILD_ROOT%{_datadir}/gnome/apps/System/* $RPM_BUILD_ROOT%{_desktopdir}
 rm -rf $RPM_BUILD_ROOT/usr/doc/lkmonitor
+rmdir $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}
 
 %find_lang %{name}
 
