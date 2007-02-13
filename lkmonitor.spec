@@ -1,5 +1,5 @@
 Summary:	lkmonitor - Linux kernel monitor
-Summary(pl.UTF-8):   lkmonitor - monitor jądra Linuksa
+Summary(pl.UTF-8):	lkmonitor - monitor jądra Linuksa
 Name:		lkmonitor
 Version:	0.2
 Release:	1
