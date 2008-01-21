@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/lkmonitor/%{name}-%{version}.tar.gz
 URL:		http://lkmonitor.sourceforge.net/
 Patch0:		%{name}-pixmapsdir.patch
 Patch1:		%{name}-locale.patch
+Patch2:		%{name}-pixmaps.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libgnomeui-devel >= 2.0
@@ -34,8 +35,10 @@ systemy plików zarejestrowane w jądrze.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 for i in po/es_ES.*; do mv "$i" `echo "$i" | sed 's/es_ES\./es\./'`; done
 for i in po/zh.*; do mv "$i" `echo "$i" | sed 's/zh\./zh_CN\./'`; done
+mv pixmaps/gnome-computer.png pixmaps/gnome-workstation.png
 
 %build
 %{__aclocal}
