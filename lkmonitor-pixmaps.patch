@@ -1,0 +1,11 @@
+--- lkmonitor-0.2/pixmaps/Makefile.am.orig	2008-01-21 11:47:44.000000000 +0000
++++ lkmonitor-0.2/pixmaps/Makefile.am	2008-01-21 11:45:34.000000000 +0000
+@@ -14,7 +14,7 @@
+ 	reload.png\
+ 	button_ok.png\
+ 	gnome-dev-memory.png\
+-	gnome-computer.png\
++	gnome-workstation.png\
+ 	gnome-dev-battery.png\
+ 	spider-shadow16.png\
+ 	spider-shadow32.png\
