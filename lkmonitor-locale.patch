@@ -1,0 +1,11 @@
+--- lkmonitor-0.2/configure.in.orig	2008-01-21 10:24:22.000000000 +0000
++++ lkmonitor-0.2/configure.in	2008-01-21 10:37:31.000000000 +0000
+@@ -18,7 +18,7 @@
+ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Package name for gettext])
+ 
+ dnl Languages which your application supports
+-ALL_LINGUAS="de es_ES eu hr it ja ru ur zh"
++ALL_LINGUAS="de es eu hr it ja ru ur zh_CN"
+ AM_GLIB_GNU_GETTEXT
+ 
+ AM_PROG_LIBTOOL
