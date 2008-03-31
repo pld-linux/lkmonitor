@@ -2,7 +2,7 @@ Summary:	lkmonitor - Linux kernel monitor
 Summary(pl.UTF-8):	lkmonitor - monitor jądra Linuksa
 Name:		lkmonitor
 Version:	0.3
-Release:	0.1
+Release:	0.2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/lkmonitor/%{name}-%{version}.tar.gz
@@ -56,7 +56,7 @@ install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 	DESTDIR=$RPM_BUILD_ROOT
 
 mv -f $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}/* $RPM_BUILD_ROOT%{_pixmapsdir}
-mv -f $RPM_BUILD_ROOT%{_datadir}/gnome/apps/System/* $RPM_BUILD_ROOT%{_desktopdir}
+mv -f $RPM_BUILD_ROOT%{_datadir}/gnome/apps/Applications/* $RPM_BUILD_ROOT%{_desktopdir}
 rm -rf $RPM_BUILD_ROOT/usr/doc/lkmonitor
 rmdir $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}
 
