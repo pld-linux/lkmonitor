@@ -1,10 +1,12 @@
 --- lkmonitor-0.2/pixmaps/Makefile.am.orig	2008-01-21 11:47:44.000000000 +0000
 +++ lkmonitor-0.2/pixmaps/Makefile.am	2008-01-21 11:45:34.000000000 +0000
-@@ -14,7 +14,7 @@
+@@ -14,8 +14,8 @@
+ 	arana-sombra48.png\
  	button_ok.png\
  	gedit-plugin-manager.png\
- 	gnome-ccperiph.png\
+-	gnome-ccperiph.png\
 -	gnome-computer.png\
++	gnome-ccperiph-lkm.png\
 +	gnome-workstation.png\
  	gnome-cpu.png\
  	gnome-dev-battery.png\
