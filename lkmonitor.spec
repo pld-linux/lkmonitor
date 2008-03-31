@@ -39,6 +39,7 @@ systemy plików zarejestrowane w jądrze.
 for i in po/es_ES.*; do mv "$i" `echo "$i" | sed 's/es_ES\./es\./'`; done
 for i in po/zh.*; do mv "$i" `echo "$i" | sed 's/zh\./zh_CN\./'`; done
 mv pixmaps/gnome-computer.png pixmaps/gnome-workstation.png
+mv pixmaps/gnome-ccperiph.png pixmaps/gnome-ccperiph-lkm.png
 
 %build
 %{__aclocal}
