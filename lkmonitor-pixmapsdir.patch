@@ -1,5 +1,6 @@
---- lkmonitor-0.3/src/interface.c.orig	2008-03-31 04:47:05.764372679 +0200
-+++ lkmonitor-0.3/src/interface.c	2008-03-31 04:47:13.763822894 +0200
+sed -e '/create_pix\(map\|buf\)/s@lkmonitor/@@' -i lkmonitor-0.3/src/interface.c
+--- lkmonitor-0.3/src/interface.c.orig	2008-03-31 16:22:48.074075901 +0200
++++ lkmonitor-0.3/src/interface.c	2008-03-31 16:24:38.066516373 +0200
 @@ -422,7 +422,7 @@
    gtk_window_set_position (GTK_WINDOW (window1), GTK_WIN_POS_CENTER);
    gtk_window_set_default_size (GTK_WINDOW (window1), 462, 342);
@@ -9,6 +10,150 @@
    if (window1_icon_pixbuf)
      {
        gtk_window_set_icon (GTK_WINDOW (window1), window1_icon_pixbuf);
+@@ -662,7 +662,7 @@
+   gtk_widget_show (hbox3);
+   gtk_notebook_set_tab_label (GTK_NOTEBOOK (nb_main), gtk_notebook_get_nth_page (GTK_NOTEBOOK (nb_main), 0), hbox3);
+ 
+-  image1 = create_pixmap (window1, "lkmonitor/gnome-cpu.png");
++  image1 = create_pixmap (window1, "gnome-cpu.png");
+   gtk_widget_show (image1);
+   gtk_box_pack_start (GTK_BOX (hbox3), image1, FALSE, FALSE, 0);
+ 
+@@ -960,7 +960,7 @@
+   gtk_widget_show (hbox4);
+   gtk_notebook_set_tab_label (GTK_NOTEBOOK (nb_main), gtk_notebook_get_nth_page (GTK_NOTEBOOK (nb_main), 1), hbox4);
+ 
+-  image2 = create_pixmap (window1, "lkmonitor/memory.png");
++  image2 = create_pixmap (window1, "memory.png");
+   gtk_widget_show (image2);
+   gtk_box_pack_start (GTK_BOX (hbox4), image2, FALSE, FALSE, 0);
+ 
+@@ -979,7 +979,7 @@
+                     (GtkAttachOptions) (GTK_FILL),
+                     (GtkAttachOptions) (GTK_EXPAND | GTK_FILL), 0, 0);
+ 
+-  image4 = create_pixmap (window1, "lkmonitor/i-chardev.png");
++  image4 = create_pixmap (window1, "i-chardev.png");
+   gtk_widget_show (image4);
+   gtk_box_pack_start (GTK_BOX (hbox6), image4, FALSE, TRUE, 0);
+ 
+@@ -994,7 +994,7 @@
+                     (GtkAttachOptions) (GTK_FILL),
+                     (GtkAttachOptions) (GTK_FILL), 0, 0);
+ 
+-  image5 = create_pixmap (window1, "lkmonitor/i-blockdev.png");
++  image5 = create_pixmap (window1, "i-blockdev.png");
+   gtk_widget_show (image5);
+   gtk_box_pack_start (GTK_BOX (hbox7), image5, FALSE, TRUE, 0);
+ 
+@@ -1037,7 +1037,7 @@
+   gtk_widget_show (hbox12);
+   gtk_container_add (GTK_CONTAINER (alignment11), hbox12);
+ 
+-  image10 = create_pixmap (window1, "lkmonitor/reload.png");
++  image10 = create_pixmap (window1, "reload.png");
+   gtk_widget_show (image10);
+   gtk_box_pack_start (GTK_BOX (hbox12), image10, FALSE, FALSE, 0);
+ 
+@@ -1049,7 +1049,7 @@
+   gtk_widget_show (hbox5);
+   gtk_notebook_set_tab_label (GTK_NOTEBOOK (nb_main), gtk_notebook_get_nth_page (GTK_NOTEBOOK (nb_main), 2), hbox5);
+ 
+-  image3 = create_pixmap (window1, "lkmonitor/i-blockdev.png");
++  image3 = create_pixmap (window1, "i-blockdev.png");
+   gtk_widget_show (image3);
+   gtk_box_pack_start (GTK_BOX (hbox5), image3, FALSE, FALSE, 0);
+ 
+@@ -1453,7 +1453,7 @@
+   gtk_widget_show (hbox11);
+   gtk_container_add (GTK_CONTAINER (alignment10), hbox11);
+ 
+-  image9 = create_pixmap (window1, "lkmonitor/button_ok.png");
++  image9 = create_pixmap (window1, "button_ok.png");
+   gtk_widget_show (image9);
+   gtk_box_pack_start (GTK_BOX (hbox11), image9, FALSE, FALSE, 0);
+ 
+@@ -1475,7 +1475,7 @@
+   gtk_widget_show (hbox10);
+   gtk_container_add (GTK_CONTAINER (alignment9), hbox10);
+ 
+-  image8 = create_pixmap (window1, "lkmonitor/reload.png");
++  image8 = create_pixmap (window1, "reload.png");
+   gtk_widget_show (image8);
+   gtk_box_pack_start (GTK_BOX (hbox10), image8, FALSE, FALSE, 0);
+ 
+@@ -1487,7 +1487,7 @@
+   gtk_widget_show (hbox8);
+   gtk_notebook_set_tab_label (GTK_NOTEBOOK (nb_main), gtk_notebook_get_nth_page (GTK_NOTEBOOK (nb_main), 3), hbox8);
+ 
+-  image6 = create_pixmap (window1, "lkmonitor/preferences-system.png");
++  image6 = create_pixmap (window1, "preferences-system.png");
+   gtk_widget_show (image6);
+   gtk_box_pack_start (GTK_BOX (hbox8), image6, FALSE, FALSE, 0);
+ 
+@@ -1817,7 +1817,7 @@
+   gtk_widget_show (hbox13);
+   gtk_frame_set_label_widget (GTK_FRAME (frame11), hbox13);
+ 
+-  image11 = create_pixmap (window1, "lkmonitor/gnome-dev-battery.png");
++  image11 = create_pixmap (window1, "gnome-dev-battery.png");
+   gtk_widget_show (image11);
+   gtk_box_pack_start (GTK_BOX (hbox13), image11, TRUE, TRUE, 0);
+ 
+@@ -1884,7 +1884,7 @@
+   gtk_widget_show (hbox9);
+   gtk_notebook_set_tab_label (GTK_NOTEBOOK (nb_main), gtk_notebook_get_nth_page (GTK_NOTEBOOK (nb_main), 4), hbox9);
+ 
+-  image7 = create_pixmap (window1, "lkmonitor/computer.png");
++  image7 = create_pixmap (window1, "computer.png");
+   gtk_widget_show (image7);
+   gtk_box_pack_start (GTK_BOX (hbox9), image7, FALSE, FALSE, 0);
+ 
+@@ -1949,7 +1949,7 @@
+   gtk_widget_show (hbox21);
+   gtk_notebook_set_tab_label (GTK_NOTEBOOK (nb_main), gtk_notebook_get_nth_page (GTK_NOTEBOOK (nb_main), 5), hbox21);
+ 
+-  image12 = create_pixmap (window1, "lkmonitor/utilities-system-monitor.png");
++  image12 = create_pixmap (window1, "utilities-system-monitor.png");
+   gtk_widget_show (image12);
+   gtk_box_pack_start (GTK_BOX (hbox21), image12, FALSE, FALSE, 0);
+ 
+@@ -2029,7 +2029,7 @@
+   gtk_widget_show (hbox22);
+   gtk_notebook_set_tab_label (GTK_NOTEBOOK (nb_main), gtk_notebook_get_nth_page (GTK_NOTEBOOK (nb_main), 6), hbox22);
+ 
+-  image13 = create_pixmap (window1, "lkmonitor/comm-channels.png");
++  image13 = create_pixmap (window1, "comm-channels.png");
+   gtk_widget_show (image13);
+   gtk_box_pack_start (GTK_BOX (hbox22), image13, FALSE, FALSE, 0);
+ 
+@@ -2318,7 +2318,7 @@
+   gtk_widget_show (hbox23);
+   gtk_notebook_set_tab_label (GTK_NOTEBOOK (nb_main), gtk_notebook_get_nth_page (GTK_NOTEBOOK (nb_main), 7), hbox23);
+ 
+-  image14 = create_pixmap (window1, "lkmonitor/network-workgroup.png");
++  image14 = create_pixmap (window1, "network-workgroup.png");
+   gtk_widget_show (image14);
+   gtk_box_pack_start (GTK_BOX (hbox23), image14, FALSE, FALSE, 0);
+ 
+@@ -2375,7 +2375,7 @@
+   gtk_widget_show (hbox24);
+   gtk_notebook_set_tab_label (GTK_NOTEBOOK (nb_main), gtk_notebook_get_nth_page (GTK_NOTEBOOK (nb_main), 8), hbox24);
+ 
+-  image15 = create_pixmap (window1, "lkmonitor/filesystem.png");
++  image15 = create_pixmap (window1, "filesystem.png");
+   gtk_widget_show (image15);
+   gtk_box_pack_start (GTK_BOX (hbox24), image15, FALSE, FALSE, 0);
+ 
+@@ -2404,7 +2404,7 @@
+   gtk_widget_show (hbox25);
+   gtk_notebook_set_tab_label (GTK_NOTEBOOK (nb_main), gtk_notebook_get_nth_page (GTK_NOTEBOOK (nb_main), 9), hbox25);
+ 
+-  image16 = create_pixmap (window1, "lkmonitor/applications-system.png");
++  image16 = create_pixmap (window1, "applications-system.png");
+   gtk_widget_show (image16);
+   gtk_box_pack_start (GTK_BOX (hbox25), image16, FALSE, FALSE, 0);
+ 
 @@ -2798,7 +2798,7 @@
    GtkWidget *about;
    GdkPixbuf *about_icon_pixbuf;
