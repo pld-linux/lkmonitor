@@ -2,15 +2,16 @@ Summary:	lkmonitor - Linux kernel monitor
 Summary(pl.UTF-8):	lkmonitor - monitor jądra Linuksa
 Name:		lkmonitor
 Version:	0.3
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/lkmonitor/%{name}-%{version}.tar.gz
 # Source0-md5:	dd84ee3952fc03ee8319658dc3866e3c
-URL:		http://lkmonitor.sourceforge.net/
 Patch0:		%{name}-pixmapsdir.patch
 Patch1:		%{name}-locale.patch
 Patch2:		%{name}-pixmaps.patch
+Patch2:		%{name}-desktop.patch
+URL:		http://lkmonitor.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libgnomeui-devel >= 2.0
@@ -36,6 +37,7 @@ systemy plików zarejestrowane w jądrze.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 for i in po/es_ES.*; do mv "$i" `echo "$i" | sed 's/es_ES\./es\./'`; done
 for i in po/zh.*; do mv "$i" `echo "$i" | sed 's/zh\./zh_CN\./'`; done
 mv pixmaps/gnome-computer.png pixmaps/gnome-workstation.png
