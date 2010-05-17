@@ -14,7 +14,9 @@ Patch3:		%{name}-desktop.patch
 URL:		http://lkmonitor.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	libgnomeui-devel >= 2.0
+BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,6 +46,7 @@ mv pixmaps/gnome-computer.png pixmaps/gnome-workstation.png
 mv pixmaps/gnome-ccperiph.png pixmaps/gnome-ccperiph-lkm.png
 
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
