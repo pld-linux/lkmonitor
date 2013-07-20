@@ -2,7 +2,7 @@ Summary:	lkmonitor - Linux kernel monitor
 Summary(pl.UTF-8):	lkmonitor - monitor jądra Linuksa
 Name:		lkmonitor
 Version:	0.3
-Release:	3
+Release:	4
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/lkmonitor/%{name}-%{version}.tar.gz
